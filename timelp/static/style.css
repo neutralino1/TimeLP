@@ -1,4 +1,47 @@
 body {
 	font-family:Arial;
-	color: blue;
+	background-image: url('https://duv2rxyjq20ja.cloudfront.net/wlcom1/backgrounds/wood.jpg');
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	font-family:'Helvetica Neue', 'Arial';
+}
+
+h1{
+	text-align:center;
+	color:rgba(0,0,0,.7);
+	font-size:60px;
+}
+
+ul {
+	list-style:none;
+}
+
+div.year {
+	color: rgba(255,255,255,.5);
+	font-size:40px;
+	text-align: center;
+	margin-top:50px;
+	margin-bottom: 30px;
+}
+
+ul.releases li {
+	float:left;
+	text-align: center;
+	width:150px;
+	height:150px;
+	border:1px solid rgba(0,0,0,.5);
+	color:rgba(0,0,0,0);
+	font-weight:bold;
+}
+
+ul.releases li:hover{
+	color:rgba(0,0,0,0.8);	
+}
+
+.fclear {
+	clear:both;
+}
+
+.courgette {
+	font-family: 'Courgette';
 }

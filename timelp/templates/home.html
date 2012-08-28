@@ -1,14 +1,25 @@
+{% load static from staticfiles %}
+
 <!DOCTYPE html>
 <html>
 <head>
-	<link ref="stylesheet" href="{{ STATIC_URL }}/static/style.css">
+	<link rel="stylesheet" href="{% static "style.css" %}">
+	<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<h1>TimeLP</h1>
-{% if collection %}
-	<ul>
-	{% for release in collection %}
-		<li><img src="{{ release.image }}"> {{ release.title }} - {{ release.original_release_date }}</li>
+	<h1 class="courgette">TimeLP</h1>
+{% if years %}
+	<ul class="years">
+	{% for y in years %}
+	<li><div class="year courgette">{{ y.year }}</div>
+		<ul class="releases">
+			{% for r in y.releases %}
+			<li style="background-image:url({{ r.thumb }});"></br>{{ r.year }} - {{ r.title }}</li>
+			{% endfor %}
+			<div class="fclear"></div>
+		</ul>
+		<div class="fclear"></div>
+	</li>
 	{% endfor %}
 	</ul>
 {% else %}
