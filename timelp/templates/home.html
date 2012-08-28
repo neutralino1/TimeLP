@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link ref="stylesheet" href="{{ STATIC_URL }}/static/style.css">
+</head>
+<body>
+	<h1>TimeLP</h1>
+{% if collection %}
+	<ul>
+	{% for release in collection %}
+		<li><img src="{{ release.image }}"> {{ release.title }} - {{ release.original_release_date }}</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No collection</p>
+{% endif %}
+</body>
+</html>
